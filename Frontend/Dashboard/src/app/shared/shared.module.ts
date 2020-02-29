@@ -9,6 +9,7 @@ import {
   MatListModule
 } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { HighchartsChartModule } from "highcharts-angular";
 import { RouterModule } from "@angular/router";
 import { PieChartComponent } from "./widget/pie-chart/pie-chart.component";
 import { HeaderComponent } from "./components/header/header.component";
@@ -35,7 +36,8 @@ import { CountTotalAreaComponent } from "./widget/count-total-area/count-total-a
     MatMenuModule,
     MatListModule,
     FlexLayoutModule,
-    RouterModule
+    RouterModule,
+    HighchartsChartModule
   ],
   exports: [
     PieChartComponent,
