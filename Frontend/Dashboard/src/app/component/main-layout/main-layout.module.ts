@@ -8,18 +8,23 @@ import {
   MatDividerModule,
   MatCardModule,
   MatPaginatorModule,
-  MatTableModule
+  MatTableModule,
+  MatFormFieldModule,
+  MatInputModule
 } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { DashboardComponent } from "src/app/pages/dashboard/dashboard.component";
 
 @NgModule({
-  declarations: [MainLayoutComponent],
+  declarations: [MainLayoutComponent, DashboardComponent],
   imports: [
     CommonModule,
     MatSidenavModule,
     MatDividerModule,
     MatCardModule,
+    MatInputModule,
     MatPaginatorModule,
+    MatFormFieldModule,
     MatTableModule,
     FlexLayoutModule,
     SharedModule,
