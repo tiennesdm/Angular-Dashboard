@@ -11,6 +11,7 @@ import {
   MatTableModule,
   MatFormFieldModule,
   MatInputModule
+  // MatSort
 } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { DashboardComponent } from "src/app/pages/dashboard/dashboard.component";
@@ -22,6 +23,7 @@ import { DashboardComponent } from "src/app/pages/dashboard/dashboard.component"
     MatSidenavModule,
     MatDividerModule,
     MatCardModule,
+    //  MatSort,
     MatInputModule,
     MatPaginatorModule,
     MatFormFieldModule,

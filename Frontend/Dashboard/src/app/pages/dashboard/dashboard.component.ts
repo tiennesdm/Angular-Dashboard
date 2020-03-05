@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { MatTableDataSource, MatPaginator } from "@angular/material";
+import { Component, OnInit, ViewChild, NgModule } from "@angular/core";
+import { MatTableDataSource, MatPaginator, MatSort } from "@angular/material";
+// import { MatSort } from "@angular/material/sort";
 import { DashboardService } from "../../services/dashboard.service";
 import { element } from "protractor";
 
@@ -26,7 +27,6 @@ const ELEMENT_DATA: PeriodicElement[] = [
   { position: 14, name: "Silicon", weight: 28.0855, symbol: "Si" },
   { position: 15, name: "Phosphorus", weight: 30.9738, symbol: "P" }
 ];
-
 @Component({
   selector: "app-dashboard",
   templateUrl: "./dashboard.component.html",
@@ -36,8 +36,9 @@ export class DashboardComponent implements OnInit {
   cards = [];
   displayedColumns: string[] = ["position", "name", "weight", "symbol"];
   dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
+
   constructor(private dashboardService: DashboardService) {}
 
   ngOnInit() {
@@ -48,9 +49,9 @@ export class DashboardComponent implements OnInit {
       // { position: 19, name: "Potassium", weight: 39.0983, symbol: "K" },
       // { position: 20, name: "Calcium", weight: 40.078, symbol: "Ca" })
     );
-    this.cards = this.dashboardService.cards();
-
+    this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
+    this.cards = this.dashboardService.cards();
   }
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

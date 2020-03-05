@@ -4,10 +4,11 @@ module.exports = {
   getConnection: () => {
     console.log(db);
     return mysql.createConnection({
-      host: db.host,
-      user: db.user,
+      host: "localhost",
+      user: "root",
       password: "",
-      databse: db.database
+      database: "sitepoint",
+      multipleStatements: true
     });
   }
 };
