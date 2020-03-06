@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const db = require("./util/dbconnection");
 console.log("hello from app.js");
 const userRoutes = require("./routes/auth");
+const productRoutes = require("./routes/product");
 
 const app = express();
 
@@ -22,6 +23,8 @@ app.use((req, res, next) => {
   );
   next();
 });
+app.use("/api/user", userRoutes);
+app.use("/api/product", productRoutes);
 
 app.use((err, req, res, next) => {
   // console.log('error:::,', err);
