@@ -38,8 +38,6 @@ exports.createUser = (req, res, next) => {
 };
 
 exports.userLogin = (req, res, next) => {
-  let fetchedUser;
-  let bcryptUser;
   let query1 = `SELECT userid,username,password,name FROM login where username='${req.body.username}'`;
   con.getConnection().query(query1, (err, rows) => {
     if (err) {
@@ -49,24 +47,34 @@ exports.userLogin = (req, res, next) => {
       });
     } else {
       // fetchedUser = user;
-      console.log(rows);
-      if (bcrypt.compare(req.body.password, rows[0].password)) {
-        const token = jwt.sign(
-          { username: rows[0].username, userId: rows[0].userid },
-          "shubham_mehta",
-          { expiresIn: "10h" }
-        );
-        res.status(200).json({
-          token: token,
-          expiresIn: 3600,
-          userId: rows[0].userid,
-          userName: rows[0].name
+      bcrypt
+        .compare(req.body.password, rows[0].password)
+        .then(result => {
+          if (result == true) {
+            const token = jwt.sign(
+              { username: rows[0].username, userId: rows[0].userid },
+              "shubham_mehta",
+              { expiresIn: "10h" }
+            );
+            res.status(200).json({
+              token: token,
+              expiresIn: 3600,
+              userId: rows[0].userid,
+              userName: rows[0].name
+            });
+          } else {
+            return res.status(401).json({
+              message: "Invalid Password credentials!"
+            });
+          }
+          console.log(result);
+        })
+        .catch(err => {
+          console.log("err", err);
+          return res.status(401).json({
+            message: "Invalid authentication credentials!"
+          });
         });
-      } else {
-        return res.status(401).json({
-          message: "Invalid authentication credentials!"
-        });
-      }
     }
 
     console.log("Data received from Db:");
