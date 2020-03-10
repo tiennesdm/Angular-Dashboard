@@ -16,7 +16,8 @@ exports.createUser = (req, res, next) => {
     let username = req.body.username;
     let name = req.body.fullName;
     let password = hash;
-    let query = `INSERT into login (name,username ,password) VALUES ('${name}', '${username}', '${password}')`;
+    let role = req.body.role;
+    let query = `INSERT into login (name,username ,password,role) VALUES ('${name}', '${username}', '${password}','${role}')`;
     //  let query = `Select * FROM authors`;
     con.getConnection().query(query, (err, rows) => {
       if (err) {

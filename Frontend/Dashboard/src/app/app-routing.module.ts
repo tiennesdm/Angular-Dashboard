@@ -13,7 +13,8 @@ const routes: Routes = [
         component: DashboardComponent
       }
     ]
-  }
+  },
+  { path: "auth", loadChildren: "./pages/auth/auth.module#AuthModule" }
 ];
 
 @NgModule({
