@@ -23,9 +23,17 @@ ul {
 .spacer {
   flex: 1 1 auto;
 }
-mat-card {
-  margin-top: 10%;
-  margin-left: 20%;
-  margin-bottom: 10%;
-  margin-right: 20%;
+.example-card {
+  max-width: 400px;
+}
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5%;
+  padding: auto;
+}
+.box div {
+  width: 350px;
+  height: 350px;
 }
