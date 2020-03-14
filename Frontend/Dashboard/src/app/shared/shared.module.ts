@@ -17,6 +17,7 @@ import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { FooterComponent } from "./components/footer/footer.component";
 import { CardComponent } from "./widget/card/card.component";
 import { CountTotalAreaComponent } from "./widget/count-total-area/count-total-area.component";
+import { MapComponent } from "./widget/map/map.component";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CountTotalAreaComponent } from "./widget/count-total-area/count-total-a
     SidebarComponent,
     FooterComponent,
     CardComponent,
-    CountTotalAreaComponent
+    CountTotalAreaComponent,
+    MapComponent
   ],
   imports: [
     CommonModule,
@@ -45,7 +47,8 @@ import { CountTotalAreaComponent } from "./widget/count-total-area/count-total-a
     SidebarComponent,
     FooterComponent,
     CardComponent,
-    CountTotalAreaComponent
+    CountTotalAreaComponent,
+    MapComponent
   ]
 })
 export class SharedModule {}

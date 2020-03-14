@@ -1,8 +1,10 @@
-import { Component, OnInit, OnDestroy } from "@angular/core";
+import { Component, OnInit, OnDestroy, Input } from "@angular/core";
 import { NgForm } from "@angular/forms";
-import { Subscription } from "rxjs";
+import { Subscription, from } from "rxjs";
 import { AuthService } from "./../../../services/auth.service";
 
+//import { scriptUrl } from "./../../../../assets/scriptUrl.json";
+var notification;
 @Component({
   selector: "app-login",
   templateUrl: "./login.component.html",
@@ -11,6 +13,8 @@ import { AuthService } from "./../../../services/auth.service";
 export class LoginComponent implements OnInit, OnDestroy {
   isLoading = false;
   private authStatusSub: Subscription;
+  notification;
+  @Input("script") param: any;
 
   constructor(public authService: AuthService) {}
 
