@@ -1,5 +1,5 @@
 <mat-nav-list>
-  <div class="profile-card">
+  <!-- <div class="profile-card">
     <div class="header">
       <h2>Shubham Mehta</h2>
       <h4>shubahm.mehta@gmail.com</h4>
@@ -8,28 +8,30 @@
       src="https://material.angular.io/assets/img/examples/shiba2.jpg"
       alt="Soufiane FADIL"
     />
-  </div>
+  </div> -->
 
-  <mat-divider></mat-divider>
+  <!-- <mat-divider></mat-divider> -->
 
   <h2 matSubheader>Pages</h2>
 
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/"
-    >Dashboard</a
+  <a
+    mat-list-item
+    routerLinkActive="list-item-active"
+    *ngFor="let item of arr"
+    routerLink="{{ item.links }}"
+    >{{ item.title }}</a
   >
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/posts"
-    >Posts</a
-  >
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/articles"
-    >Articles</a
-  >
-
   <mat-divider></mat-divider>
 
   <h2 matSubheader>Tools</h2>
 
-  <a mat-list-item routerLinkActive="list-item-active" routerLink="/contacts">
-    <mat-icon>import_contacts</mat-icon>
-    Contacts
+  <a
+    mat-list-item
+    routerLinkActive="list-item-active"
+    *ngFor="let item of Tools"
+    routerLink="{{ item.links }}"
+  >
+    <mat-icon>{{ item.icon }}</mat-icon>
+    {{ item.title }}
   </a>
 </mat-nav-list>

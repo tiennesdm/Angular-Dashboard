@@ -20,13 +20,44 @@
         </li>
         <li>
           <button mat-button [matMenuTriggerFor]="menu">
-            <mat-icon>person_outline</mat-icon>
+            <img
+              src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Soufiane FADIL"
+              class="profile_img"
+            />
           </button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>
+          <mat-menu #menu="matMenu" class="matMenuItems">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Shiba Inu</mat-card-title>
+                <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+              </mat-card-header>
+              <mat-card-content>
+                <p>
+                  The Shiba Inu is the smallest of the six original and distinct
+                  spitz breeds of dog from Japan. A small, agile dog that copes
+                  very well with mountainous terrain, the Shiba Inu was
+                  originally bred for hunting.
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-menu-item>
+                  <mat-icon>exit_to_app</mat-icon>
+                  Sign out
+                </button>
+              </mat-card-actions>
+            </mat-card>
+            <!-- <div class="profile-card">
+              <div class="header">
+                <h2>Shubham Mehta</h2>
+                <h4>shubahm.mehta@gmail.com</h4>
+              </div>
+            </div> -->
+            <!-- <button mat-menu-item>
               <mat-icon>exit_to_app</mat-icon>
               Sign out
-            </button>
+            </button> -->
           </mat-menu>
         </li>
       </ul>

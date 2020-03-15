@@ -6,7 +6,8 @@ import {
   MatIconModule,
   MatButtonModule,
   MatMenuModule,
-  MatListModule
+  MatListModule,
+  MatCardModule
 } from "@angular/material";
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { HighchartsChartModule } from "highcharts-angular";
@@ -39,7 +40,8 @@ import { MapComponent } from "./widget/map/map.component";
     MatListModule,
     FlexLayoutModule,
     RouterModule,
-    HighchartsChartModule
+    HighchartsChartModule,
+    MatCardModule
   ],
   exports: [
     PieChartComponent,
