@@ -15,8 +15,16 @@ ul li {
   object-fit: cover;
   border-radius: 50%;
 }
+.card_profile_img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  float: left;
+  background-size: cover;
+}
 .example-card {
-  max-width: 300px;
+  max-width: 250px;
 }
 
 .example-header-image {
