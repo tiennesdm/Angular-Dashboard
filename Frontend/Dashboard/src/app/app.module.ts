@@ -10,6 +10,9 @@ import "hammerjs";
 import { AppComponent } from "./app.component";
 import { AuthModule } from "./pages/auth/auth.module";
 import { AuthInterceptor } from "./pages/auth/auth-interceptor";
+
+import { ErrorInterceptor } from "./interceptor/error-interceptor";
+import { ErrorComponent } from "./shared/components/error/error.component";
 //import { DashboardComponent } from "./pages/dashboard/dashboard.component";
 //import { MainLayoutComponent } from './components/main-layout/main-layout.component';
 
@@ -30,8 +33,10 @@ import { AuthInterceptor } from "./pages/auth/auth-interceptor";
     AuthModule
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ErrorComponent]
 })
 export class AppModule {}

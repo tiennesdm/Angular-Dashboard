@@ -19,6 +19,7 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { CardComponent } from "./widget/card/card.component";
 import { CountTotalAreaComponent } from "./widget/count-total-area/count-total-area.component";
 import { MapComponent } from "./widget/map/map.component";
+import { ErrorComponent } from './components/error/error.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { MapComponent } from "./widget/map/map.component";
     FooterComponent,
     CardComponent,
     CountTotalAreaComponent,
-    MapComponent
+    MapComponent,
+    ErrorComponent
   ],
   imports: [
     CommonModule,
