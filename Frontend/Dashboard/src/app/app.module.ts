@@ -19,6 +19,7 @@ import { ErrorComponent } from "./shared/components/error/error.component";
 @NgModule({
   declarations: [
     AppComponent
+    // ErrorComponent
     // DashboardComponent
     //  MainLayoutComponent
   ],
