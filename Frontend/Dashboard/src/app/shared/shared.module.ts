@@ -20,6 +20,7 @@ import { CardComponent } from "./widget/card/card.component";
 import { CountTotalAreaComponent } from "./widget/count-total-area/count-total-area.component";
 import { MapComponent } from "./widget/map/map.component";
 import { ErrorComponent } from './components/error/error.component';
+import { UploadFileComponent } from './widget/upload-file/upload-file.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ErrorComponent } from './components/error/error.component';
     CardComponent,
     CountTotalAreaComponent,
     MapComponent,
-    ErrorComponent
+    ErrorComponent,
+    UploadFileComponent
   ],
   imports: [
     CommonModule,
@@ -52,7 +54,8 @@ import { ErrorComponent } from './components/error/error.component';
     FooterComponent,
     CardComponent,
     CountTotalAreaComponent,
-    MapComponent
+    MapComponent,
+    UploadFileComponent
   ]
 })
 export class SharedModule {}

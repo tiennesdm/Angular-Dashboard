@@ -9,6 +9,7 @@ export class SidebarComponent implements OnInit {
   arr = [
     { links: "/", title: "Dashboard" },
     { links: "/map", title: "Map" },
+    {links:"/upload-file", title:"Upload-File"},
     { links: "/articles", title: "Articles" }
   ];
   Tools = [

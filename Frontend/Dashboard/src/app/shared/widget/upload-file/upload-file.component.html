@@ -1,0 +1,17 @@
+<br />
+<mat-divider></mat-divider>
+
+<br />
+<div class="uploadfilecontainer" (click)="fileInput.click()" appDragDrop (onFileDropped)="uploadFile($event)">
+    <input hidden type="file" #fileInput (change)="uploadFile($event.target.files)" accept="image/x-png,image/gif,image/jpeg">
+</div>
+<div class="files-list" *ngFor="let file of files;let i=index">
+    <p>{{ file }}</p>
+    <button class="delete-file" (click)="deleteAttachment(i)">
+    <img src="../../../../assets/uploadFile/Recycle_Bin_Full.png">
+  </button>
+</div>
+<br />
+<mat-divider></mat-divider>
+
+<br />

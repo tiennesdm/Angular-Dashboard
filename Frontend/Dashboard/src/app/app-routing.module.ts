@@ -4,6 +4,7 @@ import { MainLayoutComponent } from "./layout/main-layout/main-layout.component"
 import { DashboardComponent } from "src/app/pages/dashboard/dashboard.component";
 import { MapComponent } from "./shared/widget/map/map.component";
 import { AuthGuard } from "./guards/auth-guard.guard";
+import {UploadFileComponent} from "./shared/widget/upload-file/upload-file.component";
 //import {  } from "./guards/auth-child.guard";
 
 const routes: Routes = [
@@ -11,7 +12,7 @@ const routes: Routes = [
     path: "",
     component: MainLayoutComponent,
     //  canActivate: [AuthGuardGuard],
-    canActivate: [AuthGuard],
+ //   canActivate: [AuthGuard],
 
     children: [
       {
@@ -24,6 +25,10 @@ const routes: Routes = [
         component: MapComponent
         // canActivate: [AuthGuardGuard]
         //  canActivate: [AuthGuardGuard]
+      },
+      {
+        path:"upload-file",
+        component:UploadFileComponent
       }
     ]
   },
