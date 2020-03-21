@@ -22,6 +22,7 @@ import { MapComponent } from "./widget/map/map.component";
 import { ErrorComponent } from './components/error/error.component';
 import { UploadFileComponent } from './widget/upload-file/upload-file.component';
 
+
 @NgModule({
   declarations: [
     PieChartComponent,
@@ -32,7 +33,8 @@ import { UploadFileComponent } from './widget/upload-file/upload-file.component'
     CountTotalAreaComponent,
     MapComponent,
     ErrorComponent,
-    UploadFileComponent
+    UploadFileComponent,
+
   ],
   imports: [
     CommonModule,
@@ -55,7 +57,8 @@ import { UploadFileComponent } from './widget/upload-file/upload-file.component'
     CardComponent,
     CountTotalAreaComponent,
     MapComponent,
-    UploadFileComponent
+    UploadFileComponent,
+
   ]
 })
 export class SharedModule {}
