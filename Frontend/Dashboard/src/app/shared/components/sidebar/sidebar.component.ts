@@ -10,6 +10,7 @@ export class SidebarComponent implements OnInit {
     { links: "/", title: "Dashboard" },
     { links: "/map", title: "Map" },
     {links:"/upload-file", title:"Upload-File"},
+    {links:"/videoPlayer", title:"VideoPlayer"},
     { links: "/articles", title: "Articles" }
   ];
   Tools = [

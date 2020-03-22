@@ -5,6 +5,7 @@ import { DashboardComponent } from "src/app/pages/dashboard/dashboard.component"
 import { MapComponent } from "./shared/widget/map/map.component";
 import { AuthGuard } from "./guards/auth-guard.guard";
 import {UploadFileComponent} from "./shared/widget/upload-file/upload-file.component";
+import {VideoPlayerComponent} from "./shared/widget/video-player/video-player.component";
 //import {  } from "./guards/auth-child.guard";
 
 const routes: Routes = [
@@ -29,6 +30,10 @@ const routes: Routes = [
       {
         path:"upload-file",
         component:UploadFileComponent
+      },
+      {
+        path:"videoPlayer",
+        component:VideoPlayerComponent
       }
     ]
   },

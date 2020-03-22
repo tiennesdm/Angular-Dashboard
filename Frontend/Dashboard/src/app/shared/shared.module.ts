@@ -21,6 +21,8 @@ import { CountTotalAreaComponent } from "./widget/count-total-area/count-total-a
 import { MapComponent } from "./widget/map/map.component";
 import { ErrorComponent } from './components/error/error.component';
 import { UploadFileComponent } from './widget/upload-file/upload-file.component';
+import { VideoPlayerComponent } from './widget/video-player/video-player.component';
+import { MatVideoModule } from 'mat-video';
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import { UploadFileComponent } from './widget/upload-file/upload-file.component'
     MapComponent,
     ErrorComponent,
     UploadFileComponent,
+    VideoPlayerComponent,
 
   ],
   imports: [
@@ -47,7 +50,8 @@ import { UploadFileComponent } from './widget/upload-file/upload-file.component'
     FlexLayoutModule,
     RouterModule,
     HighchartsChartModule,
-    MatCardModule
+    MatCardModule,
+    MatVideoModule
   ],
   exports: [
     PieChartComponent,
@@ -58,6 +62,7 @@ import { UploadFileComponent } from './widget/upload-file/upload-file.component'
     CountTotalAreaComponent,
     MapComponent,
     UploadFileComponent,
+    VideoPlayerComponent
 
   ]
 })
