@@ -13,15 +13,19 @@ import { AuthInterceptor } from "./pages/auth/auth-interceptor";
 
 import { ErrorInterceptor } from "./interceptor/error-interceptor";
 import { ErrorComponent } from "./shared/components/error/error.component";
-//import { DashboardComponent } from "./pages/dashboard/dashboard.component";
-//import { MainLayoutComponent } from './components/main-layout/main-layout.component';
+import { CodeEditorModule } from '@ngstack/code-editor';
+import { DocumentEditorModule } from '@txtextcontrol/tx-ng-document-editor';
+import { BlogEditorComponent } from './components/blog-editor/blog-editor.component';
+import {
+  MatDividerModule,
+
+
+} from "@angular/material";
 
 @NgModule({
   declarations: [
-    AppComponent
-    // ErrorComponent
-    // DashboardComponent
-    //  MainLayoutComponent
+    AppComponent,
+    BlogEditorComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +35,10 @@ import { ErrorComponent } from "./shared/components/error/error.component";
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    AuthModule
+    AuthModule,
+    DocumentEditorModule,
+    MatDividerModule
+
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

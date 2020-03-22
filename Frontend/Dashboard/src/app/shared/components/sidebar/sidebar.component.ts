@@ -11,6 +11,7 @@ export class SidebarComponent implements OnInit {
     { links: "/map", title: "Map" },
     {links:"/upload-file", title:"Upload-File"},
     {links:"/videoPlayer", title:"VideoPlayer"},
+    { links:"/blog-Editor", title:"DocumentEditor"},
     { links: "/articles", title: "Articles" }
   ];
   Tools = [

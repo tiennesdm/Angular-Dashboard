@@ -7,7 +7,6 @@ import { Component, OnInit,ViewChild,Renderer2 } from '@angular/core';
 })
 export class VideoPlayerComponent implements OnInit {
   @ViewChild('video',{static:true}) matVideo;
-  @ViewChild('matDivider',{static:true}) myvideo;
   video: HTMLVideoElement;
   title:String;
   autoplay:Boolean;
@@ -27,8 +26,6 @@ export class VideoPlayerComponent implements OnInit {
     this.fullScreen = true;
     this.poster = '../../../../assets/uploadFile/cloud-2044823_960_720.png';
     this.videoUrl= '../../../../assets/Video/NASA Rocket Launch.mp4';
-    console.log(this.matVideo);
-    console.log(this.myvideo);
      this.video = this.matVideo.getVideoTag();
     // console.log(this.matVideo.getVideoTag());
 

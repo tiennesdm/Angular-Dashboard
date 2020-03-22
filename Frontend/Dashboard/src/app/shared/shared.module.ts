@@ -24,6 +24,14 @@ import { UploadFileComponent } from './widget/upload-file/upload-file.component'
 import { VideoPlayerComponent } from './widget/video-player/video-player.component';
 import { MatVideoModule } from 'mat-video';
 
+import { CKEditorModule } from '@ckeditor/ckeditor5-angular';
+
+
+//import { CodeEditorComponent } from '../pages/code-editor/code-editor.component';
+
+
+
+
 
 @NgModule({
   declarations: [
@@ -37,6 +45,9 @@ import { MatVideoModule } from 'mat-video';
     ErrorComponent,
     UploadFileComponent,
     VideoPlayerComponent,
+   // BlogEditorComponent,
+
+   // CodeEditorComponent,
 
   ],
   imports: [
@@ -51,7 +62,8 @@ import { MatVideoModule } from 'mat-video';
     RouterModule,
     HighchartsChartModule,
     MatCardModule,
-    MatVideoModule
+    MatVideoModule,
+    CKEditorModule
   ],
   exports: [
     PieChartComponent,
@@ -62,7 +74,8 @@ import { MatVideoModule } from 'mat-video';
     CountTotalAreaComponent,
     MapComponent,
     UploadFileComponent,
-    VideoPlayerComponent
+    VideoPlayerComponent,
+    //CodeEditorComponent
 
   ]
 })

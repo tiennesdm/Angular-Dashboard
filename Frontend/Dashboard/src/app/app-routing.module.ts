@@ -6,6 +6,7 @@ import { MapComponent } from "./shared/widget/map/map.component";
 import { AuthGuard } from "./guards/auth-guard.guard";
 import {UploadFileComponent} from "./shared/widget/upload-file/upload-file.component";
 import {VideoPlayerComponent} from "./shared/widget/video-player/video-player.component";
+import {BlogEditorComponent} from './components/blog-editor/blog-editor.component'
 //import {  } from "./guards/auth-child.guard";
 
 const routes: Routes = [
@@ -34,7 +35,8 @@ const routes: Routes = [
       {
         path:"videoPlayer",
         component:VideoPlayerComponent
-      }
+      },
+      { path:"blog-Editor", component:BlogEditorComponent}
     ]
   },
   { path: "dashboard", component: MapComponent },

@@ -1,6 +1,7 @@
 const app = require("./app");
 const debug = require("debug")("assignment");
 const http = require("http");
+const { WebSocketServer } = require('@txtextcontrol/tx-websocket-server');
 
 const normalizePort = val => {
     var port = parseInt(val, 10);
@@ -50,3 +51,9 @@ const server = http.createServer(app);
 server.on("error", onError);
 server.on("listening", onListening);
 server.listen(port);
+///////Tx control web socket 
+var wsServer = new WebSocketServer(server, {
+    serviceAddress: "demos.textcontrol.com",
+    servicePort: 42770
+});
+///////
