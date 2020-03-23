@@ -2,7 +2,8 @@
 <mat-divider></mat-divider>
 
 <br />
-<mat-video #video title="{{title}}" [autoplay]="autoplay" [preload]="autoplay" [fullscreen]="fullScreen" [download]="download" color="accent" spinner="spin" poster="{{poster}}">
+<mat-video #video title="{{title}}" [autoplay]="autoplay" [preload]="autoplay" [fullscreen]="fullScreen" [download]="download" color="accent" spinner="hourglass" poster="{{poster}}" [quality]="true" [showFrameByFrame]="true" keyboard="true" color="primary"
+    time="10">
     <source matVideoSource src="{{videoUrl}}" type="video/mp4">
     <!-- <source src="tutorial.webm" type="video/webm"> -->
     <!-- <track matVideoTrack src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English">

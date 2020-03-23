@@ -5,6 +5,7 @@ const db = require("./util/dbconnection");
 console.log("hello from app.js");
 //const userRoutes = require("./routes/auth");
 //const productRoutes = require("./routes/product");
+const videoRoutes = require("./routes/videoStream");
 
 
 
@@ -28,6 +29,7 @@ app.use((req, res, next) => {
 });
 //app.use("/api/user", userRoutes);
 //app.use("/api/product", productRoutes);
+app.use("/api/", videoRoutes);
 
 app.use((err, req, res, next) => {
     // console.log('error:::,', err);
